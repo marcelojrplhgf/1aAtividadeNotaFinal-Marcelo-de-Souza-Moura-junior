@@ -1,0 +1,105 @@
+<!DOCTYPE html >
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Produtos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #001969;
+            color: #fff;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #ff000;
+            color: white;
+            text-align: left;
+            padding: 12px 15px;
+        }
+
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2c3e50; 
+        }
+
+        tr:nth-child(odd) {
+            background-color: #1a2521;
+        }
+
+        tr:hover {
+            background-color: #FF000;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela de Produtos</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Categoria</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Televisao</td>
+                <td>R$ 1.500,00</td>
+                <td>Mouse</td>
+                <td> Desfrute da melhor imagem e som com a smart tv.</td>
+            </tr>
+            <tr>
+                <td>Placa de video</td>
+                <td>R$ 1.099,00</td>
+                <td>Teclado</td>
+                <td>Conta com 2 núcleos,para fornecer um desempenho potente.</td>
+            </tr>
+            <tr>
+                <td>Headset </td>
+                <td>R$ 150,00</td>
+                <td>Headset</td>
+                <td>Headset com microfone Blue VO!CE.</td>
+            </tr>
+            <tr>
+                <td>Controle Xbox Elite Series </td>
+                <td>R$ 1.000,00</td>
+                <td>Controle</td>
+                <td>Controle personalizável com ajuste de sensibilidade e design ergonômico.</td>
+            </tr>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
