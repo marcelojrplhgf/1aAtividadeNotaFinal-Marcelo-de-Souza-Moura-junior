@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ADD8E6;
+            color: #333;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .calculator-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+            text-align: left;
+            color: #ADD8E6;
+        }
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 2px solid #4db6ac;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #b2dfdb;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #ffb74d;
+            outline: none;
+        }
+        button {
+            background-color: #ADD8E6;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ADD8E6;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .result span {
+            display: block;
+            margin-top: 10px;
+            font-size: 20px;
+            color: #4caf50;
+        }
+        .below-weight {
+            color: #e53935;
+        }
+        .normal-weight {
+            color: #4caf50;
+        }
+        .overweight {
+            color: #ff9800;
+        }
+        .obesity {
+            color: #e53935;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+            .calculator-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <div class="calculator-container">
+        <form id="imcForm">
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" name="weight" placeholder="Digite seu peso" required>
+            <label for="height">Altura (m):</label>
+            <input type="number" id="height" name="height" placeholder="Digite sua altura" step="0.01" required>
+            <button type="submit">Calcular IMC</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script>
+        function calculateIMC(event) {
+            event.preventDefault();
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+            if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+                alert("Por favor, insira valores válidos para peso e altura.");
+                return;
+            }
+            const imc = weight / (height * height);
+            let resultText = "";
+            let resultClass = "";
+            if (imc < 18.5) {
+                resultText = Seu IMC é ${imc.toFixed(2)}. Você está abaixo do peso.;
+                resultClass = "below-weight";
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                resultText = Seu IMC é ${imc.toFixed(2)}. Seu peso está normal.;
+                resultClass = "normal-weight";
+            } else if (imc >= 25 && imc <= 29.9) {
+                resultText = Seu IMC é ${imc.toFixed(2)}. Você está com sobrepeso.;
+                resultClass = "overweight";
+            } else {
+                resultText = Seu IMC é ${imc.toFixed(2)}. Você está com obesidade.;
+                resultClass = "obesity";
+            }
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = resultText;
+            resultDiv.className = result ${resultClass};
+           }
+        document.getElementById('imcForm').addEventListener('submit', calculateIMC);
+    </script>
+</body>
+</html>
