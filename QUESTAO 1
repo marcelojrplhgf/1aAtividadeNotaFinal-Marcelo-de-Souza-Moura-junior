@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Pessoal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        header {
+            background-color: #0000ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        header h1 {
+            font-size: 36px;
+        }
+        header p {
+            font-size: 18px;
+        }
+        section.info {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        section.info h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        section.info p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+        footer p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marcelo de Souza</h1>
+        <p>Programador Web</p>
+    </header>
+    <section class="info">
+        <h2>Informações Pessoais</h2>
+        <p><strong>Nome:</strong> Marcelo de Souza</p>
+        <p><strong>Matrícula:</strong> 202403317613</p>
+        <p><strong>Curso de Graduação:</strong> Analise e desenvolvimento de sistemas</p>
+        <p><strong>Objetivo Profissional:</strong> Desenvolvedor de aplicativos, foco em páginas web.</p>
+    </section>
+</body>
+</html>
